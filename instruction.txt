@@ -1,0 +1,10 @@
+Create Django project
+	django-admin startproject <name of project>
+
+Runserver(check local host)
+*first go to neccessary directory where "manage.py" file is located and then:
+	python manage.py runserver
+
+
+Create an app
+	python manage.py startapp <name of app>
