@@ -1,3 +1,11 @@
+Create virtual environment(check directory where to install)
+	python -m venv <name of virtual environment>
+
+Activate venv(in directory where we installed venv)
+	<.\name of venv\Scripts\activate>
+
+
+	
 Create Django project
 	django-admin startproject <name of project>
 
