@@ -17,10 +17,12 @@ from django.contrib import admin
 from django.urls import path
 
 from firstapp.views import *
+from django.urls import path, include
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', index), #http://127.0.0.1:800/page/
-    path('scnd/', second),
-    
+    # path('', index), #http://127.0.0.1:800/page/
+    # path('scnd/', second),
+    path('', include('firstapp.urls'))
 ]
