@@ -11,3 +11,5 @@ class Tutorial(models.Model):
     time_update = models.DateTimeField(auto_now=True)
     is_published = models.BooleanField(default=True)
 
+    def __str__(self):      #return a title name from db while running through shell
+        return self.title
