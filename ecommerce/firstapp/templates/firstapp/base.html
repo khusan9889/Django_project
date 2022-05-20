@@ -1,0 +1,89 @@
+{% load static %}  <!--connect static files-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+    <link type="text/css" href="{% static 'firstapp/css/styles.css' %}" rel="stylesheet"/>
+    <link rel="shortcut icon" href="{% static 'firstapp/images/main.ico' %}" type="image/x-icon"/>
+
+</head>
+<body>
+
+{% block mainmenu %}
+    <div class="header">
+            <ul id="mainmenu" class="mainmenu">
+                <li class="logo">
+                    <a href="#">
+                        <div class="logo"></div>
+                    </a> <</li>
+
+
+
+    {% for m in menu %}
+        {% if not forloop.last %}
+            <li><a href="#">{{m.title}}</a></li>
+        {% else %}
+            <li class="last"> <a href="#">{{m.title}}</a> </li>
+        {% endif %}
+    {% endfor %}
+            </ul>
+            <div class="clear"></div>
+
+    </div>
+{% endblock mainmenu %}
+
+<table class="table-content" border=0 cellpadding="0" cellspacing="0">
+    <tr>
+<!--        Sidebar слева-->
+        <td valign="top" class="left-chapters">
+            <ul id="leftchapters">
+                <li class="selected">all categories</li>
+                <li> <a href="#">Actors</a></li>
+                <li><a href="#">Programmers</a></li>
+                <li><a href="#">Sport</a></li>
+                <li class="share">
+                    <p>Our channel</p>
+                    <a class="share-yt" href="https://www.youtube.com/watch?v=IrUG07namQ8"></a>
+                </li>
+            </ul>
+        </td>
+<!--    Конец Sidebar а-->
+
+        <td valign="top" class="content">
+            {% block breadcumbs %}
+            {% endblock %}
+
+<!--        Блок контента    -->
+
+            <div class="content-text">
+            {% block content %}
+            {% endblock %}
+            </div>
+        </td>
+    </tr>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{%block content%}
+{% endblock %}
+</body>
+</html>

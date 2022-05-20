@@ -16,3 +16,40 @@ Runserver(check local host)
 
 Create an app
 	python manage.py startapp <name of app>
+
+Make migrations(add to db)
+	python manage.py makemigrations
+
+Migrate
+	python manage.py migrate
+
+
+
+
+			### C R U D ###
+	CREATE models in SQL
+		python manage.py shell
+
+	import class from models
+		import <app name>.models import <class name>
+
+	READ
+		<class name>.objects.all()
+		<class name>.objects.get(pk="here id number")
+	write data to db
+		<class name>()
+
+	add to db and save
+		<variable> = _  # _ means last done actions
+		<variable>.save()
+	
+	add to DB directly without separate saving 
+		<name of variable> = <class name>.objects.create() #we also can create without declaring a variavble
+		
+	UPDATE
+		<variable> = <class name>.get(pk=2)
+		<variable>.<column name where u want to update info> = 'changing here'
+
+	DELETE 
+		<variable name>.delete
+

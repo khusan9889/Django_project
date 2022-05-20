@@ -4,8 +4,14 @@ from django.urls import path
 from .views import *
 
 
+# urlpatterns = [
+#     path('',index), #http://127.0.0.1:8000/
+#     path('scnd/', second)
+# ]
+
 urlpatterns = [
-    
-    path('',index), #http://127.0.0.1:8000/
-    path('scnd/', second)
+    path('', index, name='home'),
+    path('about/', about, name= 'about'),
+
 ]
+
