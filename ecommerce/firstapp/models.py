@@ -1,5 +1,6 @@
 # from distutils.command.upload import upload
 from django.db import models
+from django.urls import reverse
 
 # Create your models here.
 class Tutorial(models.Model):
@@ -13,3 +14,15 @@ class Tutorial(models.Model):
 
     def __str__(self):      #return a title name from db while running through shell
         return self.title
+
+
+    # def get_absolute_url(self): #--> to show "see in website" buttom in page
+    #     return reverse('about')
+
+
+    class Meta:
+        verbose_name = "WebGroup Team"  #change name
+        verbose_name_plural = "WebGroup Team" #take out S at the end of name
+        ordering = ['-time_create', 'title']
+
+        

@@ -52,7 +52,7 @@
     <!-- End Hero -->
 
     <!-- Header -->
-    <header id="masthead" class="site-header">
+    <header id="masthead" class="site-header">   
         <nav id="primary-navigation" class="site-navigation" data-spy="affix">
             <div class="container">
                 <div class="navbar-header page-scroll">
@@ -512,12 +512,13 @@
                                 <div class="flipper">
                                     <div class="team-member-front">
                                         <div class="team-member-thumb">
-                                            <img src="{% static 'firstapp/img/employee-1.jpg' %}" class="img-res" alt="">
+                                            <img src="{% static 'firstapp\img\impact.jpg' %}" class="img-res" alt="">   <!-- changed photo -->
                                         </div>  <!-- /.team-member-thumb -->
                                         <p class="team-member-front-name">DIANA JOHNSON</p>
                                     </div><!-- /.team-member-front -->
                                     <div class="team-member-back">
                                         <div class="team-member-info">
+                                            
                                             <h3 class="team-member-back-name">DIANA JOHNSON</h3>
                                             <p class="team-member-back-position">Web Designer</p>
                                             <p class="team-member-back-info">Curabitur nulla odio bibendum sit amet facilisis sed lobortis id, just Donec ollic itudin facil isis nulla. Donec eget ligula. </p>
@@ -559,6 +560,8 @@
                             </div><!-- /.team-member -->       
                         </div>
                         <!-- Team Member --> 
+
+                        {% for post in posts %}
                         <div class="col-md-3 col-xs-6">
                             <div class="team-member">
                                 <div class="flipper">
@@ -584,6 +587,8 @@
                                 </div>         
                             </div><!-- /.team-member -->       
                         </div>
+{% endfor %}
+
                         <!-- Team Member --> 
                         <div class="col-md-3 col-xs-6">
                             <div class="team-member">

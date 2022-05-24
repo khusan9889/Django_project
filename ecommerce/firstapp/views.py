@@ -20,3 +20,8 @@ def index(request):
 def about(request):
     return render(request, 'firstapp/about.html', {'menu':menu,'title':'about site'})
 
+
+
+
+
+
