@@ -139,3 +139,12 @@ MEDIA_URL = '/media/'                          #add url /media/
 
 
 
+THUMBNAILS = {
+    'METADATA': {
+        'PREFIX': 'thumbs',
+        'BACKEND': 'thumbnails.backends.metadata.RedisBackend',
+        'db': 2,
+        'port': 6379,
+        'host': 'localhost',
+    },
+}
