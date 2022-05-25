@@ -1,0 +1,8 @@
+{% extends "firstapp/index.html" %}
+{% block title %}Profile Page{% endblock title %}
+
+    <div class="row my-3 p-3">
+        {% block name %}LOGO for WebGroup team{% endblock name %}
+        <p>{%block slogan%} This is the profile page for {{user.username}} {%endblock slogan%} </p>
+    </div>
+
