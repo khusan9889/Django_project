@@ -25,4 +25,7 @@ def about(request):
 def profile(request):
     return render(request, 'firstapp/profile.html')
 
-    
+
+def base(request):
+    post = Tutorial.objects.all()
+    return render(request, 'fisrtapp/base.html' )
